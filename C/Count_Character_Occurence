@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int countCharOccurrences(char str[], char target) {
+    int count = 0;
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == target) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    char str[] = "Hello, World!";
+    char target = 'o';
+    int result = countCharOccurrences(str, target);
+
+    printf("The character '%c' occurs %d times in the string \"%s\".\n", target, result, str);
+
+    return 0;
+}
