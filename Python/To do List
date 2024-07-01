@@ -1,0 +1,49 @@
+def show_menu():
+    print("To-Do List Application")
+    print("1. View To-Do List")
+    print("2. Add Task")
+    print("3. Delete Task")
+    print("4. Exit")
+
+def view_tasks(tasks):
+    if not tasks:
+        print("Your to-do list is empty.")
+    else:
+        for i, task in enumerate(tasks, 1):
+            print(f"{i}. {task}")
+
+def add_task(tasks):
+    task = input("Enter the task: ")
+    tasks.append(task)
+    print(f"Task '{task}' added to the list.")
+
+def delete_task(tasks):
+    view_tasks(tasks)
+    if tasks:
+        task_number = int(input("Enter the task number to delete: "))
+        if 1 <= task_number <= len(tasks):
+            removed_task = tasks.pop(task_number - 1)
+            print(f"Task '{removed_task}' deleted from the list.")
+        else:
+            print("Invalid task number.")
+
+def todo_list_app():
+    tasks = []
+    while True:
+        show_menu()
+        choice = input("Enter your choice (1-4): ")
+        
+        if choice == '1':
+            view_tasks(tasks)
+        elif choice == '2':
+            add_task(tasks)
+        elif choice == '3':
+            delete_task(tasks)
+        elif choice == '4':
+            print("Exiting the application. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+if __name__ == "__main__":
+    todo_list_app()
