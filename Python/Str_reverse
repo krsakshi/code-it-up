@@ -1,0 +1,8 @@
+def reverse_string(input_str):
+    return input_str[::-1]
+
+# Example usage:
+input_string = "lift"
+reversed_string = reverse_string(input_string)
+print("Original:", input_string)
+print("Reversed:", reversed_string)
