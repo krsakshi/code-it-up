@@ -1,0 +1,8 @@
+def escalator_working():
+    print("1. Passengers step onto the escalator.")
+    print("2. The escalator starts moving upwards/downwards.")
+    print("3. Passengers reach their destination floor.")
+    print("4. Passengers step off the escalator.")
+
+# Calling the escalator_working function to describe the process
+escalator_working()
